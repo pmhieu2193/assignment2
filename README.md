@@ -1,5 +1,5 @@
 ## Thông tin 
-Ngôn ngữ test: python ver 3.8
+Ngôn ngữ test: python ver 3.12
 
 Website kiểm thử: https://ecommerce.tealiumdemo.com/
 
