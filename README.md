@@ -1,36 +1,39 @@
-# assignment2
-
+## Thông tin 
 Ngôn ngữ test: python ver 3.8
--------
 Website kiểm thử: https://ecommerce.tealiumdemo.com/
--------
 Môi trường (IDE): PyCharm
--------
 Driver: Chrome, Edge
--------
 lib: pytest, requests, selenium
--------
+
+## Installation
 Cài đặt driver: driver sẽ tự động được cài đặt sau khi cài các gói thư viện sau.
----------------
+
+```bash
 pip install selenium
 pip install requests
 pip install pytest
----------------
+```
 
-Các test case đã được kiểm tra và chạy trên 2 trình duyệt là Chrome và Edge. Để chuyển đổi trình duyệt, hãy sửa biến driver trên hàm driver ứng với trình duyệt muốn tiến hành kiểm thử: 
+## Thay đổi Driver
+Các test case đã được kiểm tra và chạy trên 2 trình duyệt là Chrome và Edge. Để chuyển đổi trình duyệt, hãy sửa biến driver trên hàm driver ứng với trình duyệt muốn tiến hành kiểm thử:
+
 #cho trình duyệt chrome
 driver = webdriver.Chrome()
+
 #cho trình duyệt Edge
 driver = webdriver.Edge()
 
+## Chú ý
 Các test case đã được thiết kế để không gây ra tình trạng xung đột khi chạy không có thứ tự (vd: muốn kiểm thử test case thanh toán nhưng các sản phẩm trong giỏ hàng đã bị test case xoá sản phẩm xoá sạch dẫn đến lỗi...). Có thể kiểm thử các test case trong bài mà không cần quan tâm module hay thứ tự.
 
 File kiểm thử tên test_hieu.py, gồm 10 chức năng chính và 15 test case.
 
 Bên dưới là thông tin cơ bản từng test case ứng với chức năng và ý tưởng thiết kế.
 
+##Chi tiết 
+
 ---------------
-1. Login/Logout
+1. Login/Logout.
 
 TC1 : Kiểm tra đăng nhập thành công.
 def test_valid_login(driver):
@@ -58,14 +61,16 @@ def test_valid_search(driver):
 
 ------------------
 3. Add to Cart.
+
 def test_add_to_cart(driver):
 TC6: Kiểm tra thêm sản phẩm vào giỏ hàng.
 Ý tưởng: Sau khi thêm sản phẩm vào giỏ hàng thành công, hệ thống hiển thị thông báo văn bản, kiểm tra nội dung thông báo.
 
 ------------------
 4. Cart.
-def test_cart_empty(driver):
+
 TC7: Kiểm tra truy cập vào giỏ hàng trống.
+def test_cart_empty(driver):
 Ý tưởng: Khi click vào biểu tượng giỏ hàng khi giỏ hàng trống, hệ thống sẽ gửi thông báo "Giỏ hàng trống", kiểm tra thông báo.
 
 TC8: Kiểm tra truy cập vào giỏ hàng có sẵn sản phẩm.
@@ -82,6 +87,7 @@ Tiền điều kiện: Thực hiện thêm sản phẩm.
 
 ----------------------
 5. Check out. 
+
 TC10: Kiểm tra checkout.
 def test_check_out(driver):
 tiền điều kiện: Giỏ hàng có sẵn sản phẩm.
@@ -122,9 +128,8 @@ TC15: Kiểm tra truy cập trang wish list.
 def test_access_to_wishlist(driver):
 Ý tưởng: Sau khi truy cập wish list, hệ thống sẽ trả về trang này. Kiểm tra đường dẫn.
 
------------------------------
+## Contributing
 Thông báo của các test case failded trên IDE:
-------------------------
 
 Lỗi TC_11: Nội dung website sau khi thay đổi ngôn ngữ không thay đổi
 ID: E1
@@ -141,6 +146,4 @@ E       assert not ['https://ecommerce.tealiumdemo.com/contacts/', 'https://ecom
 AssertionError
 
 Bên trên là danh sách những link không phản hồi.
-
-
 
