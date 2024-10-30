@@ -1,10 +1,15 @@
 # assignment2
 
 Ngôn ngữ test: python ver 3.8
+-------
 Website kiểm thử: https://ecommerce.tealiumdemo.com/
+-------
 Môi trường (IDE): PyCharm
+-------
 Driver: Chrome, Edge
+-------
 lib: pytest, requests, selenium
+-------
 Cài đặt driver: driver sẽ tự động được cài đặt sau khi cài các gói thư viện sau.
 ---------------
 pip install selenium
