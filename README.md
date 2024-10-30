@@ -11,15 +11,15 @@ lib: pytest, requests, selenium
 
 ## Installation
 Cài đặt driver: driver sẽ tự động được cài đặt sau khi cài các gói thư viện sau.
-
 ```bash
 pip install selenium
 pip install requests
 pip install pytest
 ```
+Nếu cài đặt không thành công, hãy làm theo hướng dẫn tại [link](https://knowledge-curiositysoftware-ie.translate.goog/docs/how-to-install-chromedriver-for-web-ui-testing?_x_tr_sl=en&_x_tr_tl=vi&_x_tr_hl=vi&_x_tr_pto=tc) này.
 
 ## Thay đổi Driver
-Các test case đã được kiểm tra và chạy trên 2 trình duyệt là Chrome và Edge. Để chuyển đổi trình duyệt, hãy sửa biến driver trên hàm driver ứng với trình duyệt muốn tiến hành kiểm thử:
+Các test case đã được kiểm tra và chạy trên 2 trình duyệt là Chrome và Edge. Để chuyển đổi trình duyệt, hãy sửa biến driver trên hàm driver() ứng với trình duyệt muốn tiến hành kiểm thử:
 
 #cho trình duyệt chrome
 driver = webdriver.Chrome()
@@ -30,7 +30,7 @@ driver = webdriver.Edge()
 ## Chú ý
 Các test case đã được thiết kế để không gây ra tình trạng xung đột khi chạy không có thứ tự (vd: muốn kiểm thử test case thanh toán nhưng các sản phẩm trong giỏ hàng đã bị test case xoá sản phẩm xoá sạch dẫn đến lỗi...). Có thể kiểm thử các test case trong bài mà không cần quan tâm module hay thứ tự.
 
-File kiểm thử tên test_hieu.py, gồm 10 chức năng chính và 15 test case.
+File kiểm thử test_hieu.py, gồm 10 chức năng chính và 15 test case (13 PASS/ 2 FAILDED).
 
 Bên dưới là thông tin cơ bản từng test case ứng với chức năng và ý tưởng thiết kế.
 
@@ -132,7 +132,7 @@ assert placeholder_text != "Search entire store here..."
 E       AssertionError: assert 'Search entire store here...' != 'Search entire store here...'
 
 
-## FAILD  1
+## FAILD  2
 Lỗi TC_12: Những link không phản hồi
 ID: E2
 assert not list_link, print(list_link)
