@@ -35,8 +35,6 @@ File kiểm thử tên test_hieu.py, gồm 10 chức năng chính và 15 test ca
 Bên dưới là thông tin cơ bản từng test case ứng với chức năng và ý tưởng thiết kế.
 
 ##Chi tiết 
-
-
 1. Login/Logout.
 
 TC1 : Kiểm tra đăng nhập thành công.
