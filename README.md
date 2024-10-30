@@ -45,6 +45,8 @@ Tiền điều kiện: Thông tin đăng nhập đã được đăng kí trướ
 
 Ý tưởng: Cho hệ thống chờ vài giây sau khi đăng nhập thành công, sau đó kiểm tra đường dẫn hiện tại so sánh với trang trủ.
 
+-----------
+
 TC2 : Kiểm tra đăng nhập với email và password không đúng.
 
 def test_invalid_login(driver):
